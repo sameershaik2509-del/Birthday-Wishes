@@ -1,0 +1,11 @@
+<div class="stars-container">
+  <div
+    class="star"
+    *ngFor="let s of stars"
+    [style.left.px]="s.left"
+    [style.top.px]="s.top"
+    [style.width.px]="s.size"
+    [style.height.px]="s.size"
+    [style.animation-delay.s]="s.delay">
+  </div>
+</div>

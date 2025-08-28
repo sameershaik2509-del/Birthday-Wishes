@@ -1,0 +1,47 @@
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+// .heart {
+//   position: absolute;
+//   width: 25px;
+//   height: 25px;
+//   background: red;
+//   clip-path: path("M12.5 4C12.5 2.62 11.38 1.5 10 1.5C8.62 1.5 7.5 2.62 7.5 4C7.5 2.62 6.38 1.5 5 1.5C3.62 1.5 2.5 2.62 2.5 4C2.5 7.09 10 12 10 12C10 12 17.5 7.09 17.5 4C17.5 2.62 16.38 1.5 15 1.5C13.62 1.5 12.5 2.62 12.5 4Z");
+//   animation: blast 3s ease-out forwards;
+// }
+
+// @keyframes blast {
+//   0% {
+//     transform: scale(0) translate(0, 0);
+//     opacity: 1;
+//   }
+//   100% {
+//     transform: scale(1.5) translate(calc(100vw * (random - 0.5)), calc(100vh * (random - 0.5)));
+//     opacity: 0;
+//   }
+// }
+.heart {
+  position: absolute;
+  font-size: 15px;
+  animation: floatUp 3s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) scale(1.2);
+    opacity: 0;
+  }
+}
+

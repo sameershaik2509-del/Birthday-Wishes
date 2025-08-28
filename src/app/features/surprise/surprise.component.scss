@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #b5075e, #042637);
+  overflow: hidden;
+  position: relative;
+}
+
+.card {
+  background: rgb(218, 221, 224);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.celebration h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.wish {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.special-message {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  background: rgba(255,255,255,0.8);
+  padding: 1rem;
+  border-radius: 1rem;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}

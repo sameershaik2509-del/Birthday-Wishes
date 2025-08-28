@@ -1,0 +1,8 @@
+<!-- <div class="hearts-container">
+  <div *ngFor="let heart of hearts" class="heart" [style.left.%]="heart.left" [style.top.%]="heart.top"></div>
+</div> -->
+<div class="heart" *ngFor="let heart of hearts"
+     [style.left.%]="heart.left"
+     [style.top.%]="heart.top">
+  ❤️
+</div>
