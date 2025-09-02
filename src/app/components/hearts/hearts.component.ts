@@ -20,7 +20,7 @@ export class HeartsComponent implements OnChanges {
 
   launchBlast() {
   this.hearts = [];
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i <500; i++) {
     this.hearts.push({
       left: Math.random() * 100,
       top: Math.random() * 100
@@ -30,7 +30,7 @@ export class HeartsComponent implements OnChanges {
   // remove hearts after animation duration
   setTimeout(() => {
     this.hearts = [];
-  }, 3000); // 3 seconds, matches CSS animation
+  }, 6000); // 3 seconds, matches CSS animation
 }
 
 }

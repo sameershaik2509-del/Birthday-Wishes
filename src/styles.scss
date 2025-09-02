@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Ensure Angular Material dialogs fit viewport */
+.mat-mdc-dialog-surface {
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  overflow: hidden !important;
+  border-radius: 12px;
+}

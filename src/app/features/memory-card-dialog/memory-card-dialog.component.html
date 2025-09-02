@@ -1,0 +1,28 @@
+<!-- <p>memory-card-dialog works!</p> -->
+
+<div class="dialog">
+  <header class="head">
+    <div class="emoji">{{ data.emoji }}</div>
+    <h2 class="title">{{ data.title }}</h2>
+    <button mat-icon-button aria-label="Close" (click)="close()" class="close">
+      <mat-icon>close</mat-icon>
+    </button>
+  </header>
+
+  <section class="meta" *ngIf="data.date">
+    <mat-icon>event</mat-icon>
+    <span>{{ data.date | date:'mediumDate' }}</span>
+  </section>
+
+  <section class="body">
+    <p>{{ data.description }}</p>
+  </section>
+
+  <!-- <footer class="actions">
+    <button mat-flat-button color="primary" (click)="close()">
+      <mat-icon>check</mat-icon>
+      Done
+    </button>
+  </footer> -->
+</div>
+

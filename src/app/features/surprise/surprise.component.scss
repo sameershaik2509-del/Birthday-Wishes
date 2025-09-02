@@ -4,16 +4,17 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(135deg, #b5075e, #042637);
+  // background: linear-gradient(135deg, rgb(61, 20, 29), rgb(61, 3, 33));
+  background: linear-gradient(135deg, rgb(214, 7, 162) 0%, purple 50%, maroon 100%);
   overflow: hidden;
   position: relative;
 }
 
 .card {
-  background: rgb(218, 221, 224);
+  background: rgb(214, 206, 212);
   padding: 2rem;
   border-radius: 1.5rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .celebration h1 {
@@ -29,13 +30,20 @@
 .special-message {
   margin-top: 2rem;
   font-size: 1.2rem;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   padding: 1rem;
   border-radius: 1rem;
   animation: fadeIn 1s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

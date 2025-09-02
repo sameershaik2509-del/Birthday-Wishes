@@ -6,6 +6,7 @@ import confetti from 'canvas-confetti';
 import { BalloonsComponent } from '../../components/balloons/balloons.component';
 import { HeartsComponent } from '../../components/hearts/hearts.component';
 import { StarsComponent } from '../../components/stars/stars.component';
+import { Router, RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-surprise',
@@ -15,16 +16,22 @@ import { StarsComponent } from '../../components/stars/stars.component';
     MatButtonModule,
     BalloonsComponent,
     HeartsComponent,
-    StarsComponent
-  ],
+    StarsComponent,
+    RouterLink
+],
   templateUrl: './surprise.component.html',
   styleUrls: ['./surprise.component.scss']
 })
 export class SurpriseComponent {
   revealed = signal(false);
   showSpecial = false; // set true only for special message
-  name = "Friend";
+  name = "Sameer";
 
+  constructor(private router: Router) {}
+
+  goToMessage() {
+    this.router.navigate(['/message']);
+  }
   reveal() {
     this.revealed.set(true);
 
@@ -63,7 +70,7 @@ export class SurpriseComponent {
       scalar: 2,
       shapes: ['text'] as any, // use emoji shape
       text: '❤️',
-      colors: ['#ff0000']
+      colors: ['#ff0000', '#eeececff']
     };
 
     const interval: any = setInterval(() => {

@@ -1,0 +1,120 @@
+// .dialog {
+//   position: relative;
+//   min-width: min(480px, 86vw);
+// }
+
+// .head {
+//   display: grid;
+//   grid-template-columns: auto 1fr auto;
+//   align-items: center;
+//   gap: 12px;
+// }
+
+// .emoji {
+//   font-size: 28px;
+// }
+
+// .title {
+//   margin: 0;
+// }
+
+// .close {
+//   margin-left: auto;
+// }
+
+// .meta {
+//   display: inline-flex;
+//   align-items: center;
+//   gap: 6px;
+//   opacity: .8;
+//   margin: 8px 0 4px;
+// }
+
+// .body {
+//   margin-top: 8px;
+// }
+
+// .actions {
+//   display: flex;
+//   justify-content: flex-end;
+//   margin-top: 16px;
+// }
+.dialog {
+position: relative;
+min-width: min(480px, 86vw);
+max-height: 80vh; /* keep dialog within viewport */
+overflow: hidden; /* prevent outer scroll \*/
+display: flex;
+flex-direction: column;
+padding: 16px; /* overall padding inside dialog \*/
+}
+
+.head {
+display: grid;
+grid-template-columns: auto 1fr auto;
+align-items: center;
+gap: 12px;
+margin-top: 8px;
+margin-left: 8px;
+}
+
+.emoji {
+font-size: 28px;
+}
+
+.title {
+margin: 0;
+}
+
+.close {
+margin-left: auto;
+}
+
+.meta {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+opacity: .8;
+margin: 12px 0 8px 8px; /* add left margin \*/
+}
+
+.body {
+margin-top: 12px;
+margin-left: 8px; /* left padding for text */
+overflow-y: auto; /* allow inner scroll if needed \*/
+padding-right: 6px;
+flex: 1;
+}
+
+/* custom scrollbar styling matching button color \*/
+.body::-webkit-scrollbar {
+width: 8px;
+}
+
+.body::-webkit-scrollbar-track {
+background: transparent;
+}
+
+.body::-webkit-scrollbar-thumb {
+background-color: #c2185b; /* match mat-primary or button color \*/
+border-radius: 4px;
+}
+
+.body::-webkit-scrollbar-thumb:hover {
+background-color: #ad1457;
+}
+
+.actions {
+display: flex;
+justify-content: flex-end;
+margin-top: 16px;
+margin-right: 12px; /* space to right */
+margin-bottom: 12px; /* space to bottom \*/
+}
+
+/* Prevent outer dialog container scroll */
+.mat-mdc-dialog-surface {
+  overflow: hidden !important;
+}
+
+

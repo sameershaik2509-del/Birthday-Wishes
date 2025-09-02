@@ -1,0 +1,71 @@
+.heart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+//   background: linear-gradient(135deg, rgb(189, 145, 178) 0%, rgb(153, 76, 153) 50%, rgb(126, 55, 55) 100%);
+//   background: linear-gradient(135deg, rgb(82, 99, 36), rgb(8, 151, 115));
+  background: rgb(221, 191, 157);
+  color: #c50c0c;
+  text-align: center;
+
+  h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.heart {
+  width: 250px;
+  height: 250px;
+}
+
+.heart path {
+  stroke: #c70334;
+  stroke-width: 1;
+  fill: transparent;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* prepare stroke for draw animation */
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+
+  animation:
+    drawOutline 30s linear forwards,    /* step 1: draw the heart */
+    fillColor 1s ease-in forwards 5s,  /* step 2: fill after drawing */
+    pulse 1s ease-in-out infinite 6s;  /* step 3: pulse after fill */
+
+  transform-origin: 50% 50%;  /* ✅ keep pulse centered */
+  transform-box: fill-box;    /* ✅ relative to heart path */
+  box-shadow: #141414;
+}
+.special-message {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 1rem;
+  animation: fadeIn 1s ease;
+}
+
+/* Step 1: Draw clockwise from a dot */
+@keyframes drawOutline {
+  0%   { stroke-dashoffset: 500; }
+  100% { stroke-dashoffset: 0; }
+}
+
+/* Step 2: Fill the heart */
+@keyframes fillColor {
+  0%   { fill: transparent; }
+  100% { fill: #c70334; }
+}
+
+/* Step 3: Gentle pulse */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.03); } /* subtle 3% scale */
+  100% { transform: scale(1); }
+}

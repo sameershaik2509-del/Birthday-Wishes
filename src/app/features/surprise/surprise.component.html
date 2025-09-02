@@ -2,32 +2,32 @@
   
   <!-- Initial Screen -->
   <div *ngIf="!revealed()" class="card">
-    <h1>🎁 You have a surprise!</h1>
+    <h1>I have something for you</h1>
     <button mat-raised-button color="primary" (click)="reveal()">
-      Open Surprise
+      Lets start
     </button>
   </div>
 
   <!-- Celebration Screen -->
   <div *ngIf="revealed()" class="celebration">
-    <h1>🎉 Happy Birthday {{name}}!</h1>
-    <p class="wish">Wishing you love, joy, and endless happiness 💖</p>
+    <h1 style="color: whitesmoke;">Happy Birthday {{name}}!</h1>
+    <p class="wish" style="color: whitesmoke;">Wishing you love, joy, and endless happiness</p>
 
     <!-- Floating Components -->
     <app-balloons></app-balloons>
     <!-- <app-hearts></app-hearts> -->
-    <app-stars></app-stars>
+     <!-- <app-hearts  [trigger]="showSpecial"></app-hearts> -->
+    <!-- <app-stars></app-stars> -->
 
     <!-- Special Message -->
-    <button mat-raised-button color="accent" (click)="showSpecial = !showSpecial">
+    <button mat-raised-button color="accent" (click)= "goToMessage()">
       ❤️ Special Message
     </button>
-
-    <div *ngIf="showSpecial" class="special-message">
+<!-- 
+    <div *ngIf="showSpecial" class="special-message" >
       <p>🌟 You are one of the most amazing people in my life.  
       May your birthday bring countless smiles and unforgettable memories. 💝</p>
-      <app-hearts  [trigger]="showSpecial"></app-hearts>
-    </div>
+    </div> -->
   </div>
 </div>
 

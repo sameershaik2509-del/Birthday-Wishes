@@ -1,0 +1,26 @@
+<!-- <p>memory-cards works!</p> -->
+<div class="memory-cards-style">
+    <div class="memory-grid">
+        <mat-card class="memory-card" *ngFor="let c of cards" (click)="openCard(c)" tabindex="0"
+            (keyup.enter)="openCard(c)">
+            <mat-card-header>
+                <div mat-card-avatar class="avatar">{{ c.emoji }}</div>
+                <mat-card-title>{{ c.title }}</mat-card-title>
+                <mat-card-subtitle *ngIf="c.subtitle">{{ c.subtitle }}</mat-card-subtitle>
+            </mat-card-header>
+
+
+            <mat-card-content>
+                <p class="preview" *ngIf="c.description">{{ c.description }}</p>
+            </mat-card-content>
+
+
+            <mat-card-actions align="end">
+                <button mat-stroked-button color="primary" (click)="$event.stopPropagation(); openCard(c)">
+                    <mat-icon>open_in_new</mat-icon>
+                    Open
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
