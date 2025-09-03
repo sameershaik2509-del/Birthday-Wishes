@@ -4,17 +4,9 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-//   background: linear-gradient(135deg, rgb(189, 145, 178) 0%, rgb(153, 76, 153) 50%, rgb(126, 55, 55) 100%);
-//   background: linear-gradient(135deg, rgb(82, 99, 36), rgb(8, 151, 115));
   background: rgb(221, 191, 157);
   color: #c50c0c;
   text-align: center;
-
-  h2 {
-    margin-top: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-  }
 }
 
 .heart {
@@ -28,27 +20,15 @@
   fill: transparent;
   stroke-linecap: round;
   stroke-linejoin: round;
-
-  /* prepare stroke for draw animation */
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
-
   animation:
-    drawOutline 30s linear forwards,    /* step 1: draw the heart */
-    fillColor 1s ease-in forwards 5s,  /* step 2: fill after drawing */
-    pulse 1s ease-in-out infinite 6s;  /* step 3: pulse after fill */
-
-  transform-origin: 50% 50%;  /* ✅ keep pulse centered */
-  transform-box: fill-box;    /* ✅ relative to heart path */
+    drawOutline 30s linear forwards,
+    fillColor 1s ease-in forwards 5s,
+    pulse 1s ease-in-out infinite 6s;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
   box-shadow: #141414;
-}
-.special-message {
-  margin-top: 2rem;
-  font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 1rem;
-  border-radius: 1rem;
-  animation: fadeIn 1s ease;
 }
 
 /* Step 1: Draw clockwise from a dot */
@@ -66,6 +46,31 @@
 /* Step 3: Gentle pulse */
 @keyframes pulse {
   0%   { transform: scale(1); }
-  50%  { transform: scale(1.03); } /* subtle 3% scale */
+  50%  { transform: scale(1.03); }
   100% { transform: scale(1); }
+}
+
+/* ✅ Card Styles */
+.info-card {
+  margin-top: 1.5rem;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    color: #fff;
+    background-color: #c70334;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    align-content: flex-end;
+
+  }
 }

@@ -6,8 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
+    "test": "ng test",
+    "deploy": "rm -rf dist/wishes && ng build --configuration production --base-href \"https://sameershaik2509-del.github.io/Birthday-Wishes/\" && cp dist/wishes/index.html dist/wishes/404.html && npx angular-cli-ghpages --dir=dist/wishes"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.0",

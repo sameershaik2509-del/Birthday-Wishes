@@ -13,8 +13,8 @@
 /* star shape using ::before + ::after cross */
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 3px;
+  height: 3px;
   background: transparent;
   border-radius: 50%;
   animation: twinkle 3s infinite alternate;
@@ -28,10 +28,10 @@
   left: 50%;
   width: 100%;
   height: 100%;
-  background: rgb(243, 228, 18);
+  background: rgb(177, 165, 1);
   transform-origin: center;
   border-radius: 50%;
-  filter: drop-shadow(0 0 4px #fff);
+  filter: drop-shadow(0 0 4px #694501);
 }
 
 .star::before {
@@ -47,14 +47,24 @@
   100% { opacity: 0.3; transform: scale(0.9); }
 }
 
-/* 🌙 moon styling */
-.moon {
-  position: absolute;
-  top: 80px;
-  right: 120px;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle at 30% 30%, #fdfdfd, #cfcfcf 70%);
-  border-radius: 50%;
-  box-shadow: 0 0 40px 10px rgba(255, 255, 200, 0.5);
-}
+// .moon {
+//   position: absolute;
+//   top: 80px;
+//   left: 120px;
+//   width: 60px;
+//   height: 60px;
+//   background: radial-gradient(circle at 30% 30%, #fdfdfd, #cfcfcf 70%);
+//   border-radius: 50%;
+//   // box-shadow: 0 0 20px 5px rgba(255, 255, 200, 0.4);
+// }
+
+// .moon::after {
+//   content: "";
+//   position: absolute;
+//   top: -6px;
+//   left: 10px; /* adjust for crescent thickness */
+//   width: 60px;
+//   height: 60px;
+//   background: linear-gradient( rgb(61, 20, 29), rgb(61, 3, 33)); /* SAME as your body background */
+//   border-radius: 50%;
+// }
